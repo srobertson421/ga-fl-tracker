@@ -6,7 +6,7 @@ angular.module('TrackerApp', ['ui.router', 'Home'])
   .state('home', {
     url: '/',
     templateUrl: 'app/pages/home/home.html',
-    controller: 'HomeCtrl'
+    controller: 'HomeCtrl as home'
   })
   .state('404', {
     url: '/404',

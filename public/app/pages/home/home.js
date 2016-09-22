@@ -1,4 +1,5 @@
-angular.module('Home', [])
+angular.module('Home', ['RecentPurchasesModule'])
 .controller('HomeCtrl', ['$scope', function($scope) {
-  $scope.name = 'Sean'
+  // use this
+  
 }]);

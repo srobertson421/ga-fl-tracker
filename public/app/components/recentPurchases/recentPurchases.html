@@ -1,0 +1,6 @@
+<ul class="collection with-header">
+  <li class="collection-header red darken-2 white-text"><h4>{{$ctrl.title}}</h4></li>
+  <li class="collection-item" ng-repeat="purchase in $ctrl.purchases">
+    {{purchase.product}} - {{purchase.price}}
+  </li>
+</ul>
