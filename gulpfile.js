@@ -10,7 +10,7 @@ gulp.task('minify-js', function () {
   gulp.src('./public/app/**/*.js') // path to your files
   .pipe(concat('app.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('./public/app/build'));
+  .pipe(gulp.dest('./public/build'));
 });
  
 // CSS Task
@@ -18,9 +18,9 @@ gulp.task('minify-css', function () {
   gulp.src('./public/css/*.css') // path to your file
   .pipe(concat('app.css'))
   .pipe(minifyCss())
-  .pipe(gulp.dest('./public/css/build'));
+  .pipe(gulp.dest('./public/build'));
 });
 
-gulp.task('watch-js', function() {
-  gulp.watch('./public/app/**/*.js', ['minify-js']);
+gulp.task('watch', function() {
+  gulp.watch(['./public/app/**/*.js', './public/css/**/*.css'], ['minify-js', 'minify-css']);
 }); 
